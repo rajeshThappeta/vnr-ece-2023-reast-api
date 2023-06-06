@@ -1,10 +1,10 @@
-GET http://localhost:4000/users
+GET http://localhost:4000/user-api/users
 
 ###
-GET http://localhost:4000/users/300
+GET http://localhost:4000/user-api/users/300
 
 ###
-POST http://localhost:4000/user
+POST http://localhost:4000/user-api/user
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 
 ###
-PUT http://localhost:4000/user/200
+PUT http://localhost:4000/user-api/user/200
 Content-Type: application/json
 
 {
@@ -27,4 +27,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:4000/user/200
+DELETE http://localhost:4000/user-api/user/200
+
+###
+get http://localhost:4000/product-api/product
