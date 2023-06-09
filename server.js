@@ -2,6 +2,24 @@
 const exp=require('express')
 const app=exp();
 
+//import MongoClient
+const mngClient=require('mongodb').MongoClient;
+
+
+//connecting to MongoDB server with mongo client
+mngClient.connect('mongodb://localhost:27017/ecedb')
+.then(client=>{
+    //get db obj
+    let db=client.db('ecedb')
+    //get collection obj
+    let usersCollectionObj=db.collection('users')
+
+    console.log("Database connected successfully")
+})
+.catch(err=>console.log("err in db connect ",err))
+
+
+
 const userApp=require("./apis/userApi")
 const productApp=require('./apis/productApi')
 
