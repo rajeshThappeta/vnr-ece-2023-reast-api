@@ -7,12 +7,14 @@ const mngClient=require('mongodb').MongoClient;
 
 
 //connecting to MongoDB server with mongo client
-mngClient.connect('mongodb://localhost:27017/ecedb')
+mngClient.connect('mongodb://127.0.0.1:27017/ecedb')
 .then(client=>{
     //get db obj
     let db=client.db('ecedb')
     //get collection obj
     let usersCollectionObj=db.collection('users')
+    //share usersCollectionObj
+    app.set('usersCollectionObj',usersCollectionObj)
 
     console.log("Database connected successfully")
 })
