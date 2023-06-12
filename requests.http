@@ -1,7 +1,7 @@
 GET http://localhost:4000/user-api/users
 
 ###
-GET http://localhost:4000/user-api/users/300
+GET http://localhost:4000/user-api/users/kiran
 
 ###
 POST http://localhost:4000/user-api/user
@@ -10,24 +10,48 @@ Content-Type: application/json
 {
    "username":"kiran",
    "password":"kiran",
-   "email":"kiran@mail.com"
+   "email":"kiran@mail.com",
+   "city":"hyderabad"
 }
 
 
 
 
 ###
-PUT http://localhost:4000/user-api/user/200
+PUT http://localhost:4000/user-api/user/kiran
 Content-Type: application/json
 
 {
-    "id":200,
-    "username":"bhanukumar",
-    "email":"bhanukumar@mail.com"
+    "username":"kiran",
+   "password":"kiran",
+   "email":"kiranbabu@mail.com"
 }
 
 ###
-DELETE http://localhost:4000/user-api/user/200
+DELETE http://localhost:4000/user-api/user/kiran
 
 ###
-get http://localhost:4000/product-api/product
+GET http://localhost:4000/user-api/restore-user/kiran
+
+
+
+
+
+
+
+###PRODUCT ROUTES
+POST http://localhost:4000/product-api/product
+Content-Type: application/json
+
+{
+    "productId":200,
+    "productName":"tv",
+    "price":300000,
+    "brand":"sony"
+}
+
+###
+GET http://localhost:4000/product-api/products/200
+
+###
+GET http://localhost:4000/product-api/products
